@@ -62,12 +62,12 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: When trying to add a toy the server log says "NameError (uninitialized constant ToysController::Toys)", so I changed it in the controller from Toys to Toy.
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: When trying to update likes, server log said :id was not a permitted param and console in browser said there was no json in response, so I permitted :id and returned rendered the updated toy as json.
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+  - How I debugged: Server log said there was no route for DELETE so I added :destroy to resources in routes.rb.
